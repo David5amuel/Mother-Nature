@@ -14,17 +14,18 @@ func _ready():
 	stats.connect("dashCountIncreased", self, "growUp")
 	
 func _physics_process(delta):
+	print(playerKiller.monitoring)
 	friendlyOrHarmful()	
 
 #Define se a planta vai matar o player ou servir de plataforma.
 func friendlyOrHarmful():
 	if is_harmful:
 		set_collision_layer(3)
-		set_deferred("monitoring", true)	
+		playerKiller.set_deferred("monitorable", true)	
 		collisionShape.set_deferred("disabled", true)
 	else:
 		set_collision_layer(1)
-		set_deferred("monitoring", false)
+		playerKiller.set_deferred("monitorable", false)
 		collisionShape.set_deferred("disabled", false)
 	
 #Faz a planta crescer com base no número de dashs dado pelo player

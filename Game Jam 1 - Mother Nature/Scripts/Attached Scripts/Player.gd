@@ -4,6 +4,7 @@ const SPEED : int = 800
 
 onready var wallDetector = $WallDetector
 onready var dashCounterZone = get_parent().get_node("DashCounterZone")
+onready var camera = $Camera2D
 onready var stats = LevelStats
 
 enum {
@@ -14,6 +15,8 @@ enum {
 	NONE
 }
 
+var cameraLimits = [-5, -5, 365, 185]
+
 var direction = NONE
 var last_direction = NONE
 
@@ -23,8 +26,6 @@ var moving := false
 var cornerExploit := false
 
 func _physics_process(delta):
-	
-	print(stats.sunCount)
 	
 	action_pressed()
 	
@@ -43,6 +44,10 @@ func _physics_process(delta):
 			last_direction = RIGHT
 		NONE:
 			move(0, 0)
+			camera.limit_right = 360
+			camera.limit_bottom = 180
+			camera.limit_left = 0
+			camera.limit_top = 0
 	
 #Define os valores de velocity		
 func move(x : int, y : int):
@@ -88,12 +93,19 @@ func action_pressed():
 			
 	if moving == false:
 		direction = NONE
+		
+	if moving == true:
+		camera.limit_left = cameraLimits[0]
+		camera.limit_top = cameraLimits[1]
+		camera.limit_right = cameraLimits[2]
+		camera.limit_bottom = cameraLimits[3]
 
 #Detecta paredes, e desativa toda vez que encontra uma parede
 func _on_WallDetector_body_entered(body):
 	dashCounterZone.position = position
 	self.rotation_degrees += 180
 	moving = false
+	dashCounterZone.set_deferred("monitoring", true)
 	wallDetector.set_deferred("monitoring", false)
 
 func _on_EnemyDetector_area_entered(area):

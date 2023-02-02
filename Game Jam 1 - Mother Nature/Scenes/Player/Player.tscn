@@ -39,5 +39,14 @@ collision_mask = 4
 modulate = Color( 0.203922, 0.858824, 0.231373, 1 )
 shape = SubResource( 3 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = -5
+limit_top = -5
+limit_right = 365
+limit_bottom = 185
+limit_smoothed = true
+smoothing_enabled = true
+
 [connection signal="body_entered" from="WallDetector" to="." method="_on_WallDetector_body_entered"]
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]

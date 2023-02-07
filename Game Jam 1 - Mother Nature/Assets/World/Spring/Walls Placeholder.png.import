@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CollectableSun.png-a0122562bfc7dd3971644dc7759e9904.stex"
+path="res://.import/Walls Placeholder.png-00bf9f5d52a18114cb9e5441eaab542a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/World/CollectableSun.png"
-dest_files=[ "res://.import/CollectableSun.png-a0122562bfc7dd3971644dc7759e9904.stex" ]
+source_file="res://Assets/World/Spring/Walls Placeholder.png"
+dest_files=[ "res://.import/Walls Placeholder.png-00bf9f5d52a18114cb9e5441eaab542a.stex" ]
 
 [params]
 

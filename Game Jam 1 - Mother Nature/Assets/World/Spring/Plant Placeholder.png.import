@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rose Placeholder.png-50d0a652851d3cc5439c473c506bb78d.stex"
+path="res://.import/Plant Placeholder.png-f4113e909b593d409c0e41342ca8cc05.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/World/Rose Placeholder.png"
-dest_files=[ "res://.import/Rose Placeholder.png-50d0a652851d3cc5439c473c506bb78d.stex" ]
+source_file="res://Assets/World/Spring/Plant Placeholder.png"
+dest_files=[ "res://.import/Plant Placeholder.png-f4113e909b593d409c0e41342ca8cc05.stex" ]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/World/Plant Placeholder.png" type="Texture" id=1]
+[ext_resource path="res://Assets/World/Spring/Plant Placeholder.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Blueprints/PlantsBlueprint.tscn" type="PackedScene" id=2]
 
 [node name="MediumPlant" instance=ExtResource( 2 )]

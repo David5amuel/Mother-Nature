@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Walls Placeholder.png-f7e10cd55ac29048dd39d95c833fef8c.stex"
+path="res://.import/SpringFloorDetailsSheett.png-9fcc2e938f614f14da57fc187610b65e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/World/Walls Placeholder.png"
-dest_files=[ "res://.import/Walls Placeholder.png-f7e10cd55ac29048dd39d95c833fef8c.stex" ]
+source_file="res://Assets/World/Spring/SpringFloorDetailsSheett.png"
+dest_files=[ "res://.import/SpringFloorDetailsSheett.png-9fcc2e938f614f14da57fc187610b65e.stex" ]
 
 [params]
 

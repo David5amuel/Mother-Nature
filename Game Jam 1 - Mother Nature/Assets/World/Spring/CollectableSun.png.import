@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plant Placeholder.png-ca1a35e5854a4294f7397a959f94e8b7.stex"
+path="res://.import/CollectableSun.png-5f4e39037f4f701dfe34d82a4d12dae6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/World/Plant Placeholder.png"
-dest_files=[ "res://.import/Plant Placeholder.png-ca1a35e5854a4294f7397a959f94e8b7.stex" ]
+source_file="res://Assets/World/Spring/CollectableSun.png"
+dest_files=[ "res://.import/CollectableSun.png-5f4e39037f4f701dfe34d82a4d12dae6.stex" ]
 
 [params]
 

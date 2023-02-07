@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED : int = 800
+const SPEED : int = 600
 
 onready var wallDetector = $WallDetector
 onready var dashCounterZone = get_parent().get_node("DashCounterZone")
@@ -95,6 +95,7 @@ func action_pressed():
 		direction = NONE
 		
 	if moving == true:
+		camera.smoothing_enabled = true
 		camera.limit_left = cameraLimits[0]
 		camera.limit_top = cameraLimits[1]
 		camera.limit_right = cameraLimits[2]

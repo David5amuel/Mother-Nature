@@ -14,7 +14,6 @@ func _ready():
 	stats.connect("dashCountIncreased", self, "growUp")
 	
 func _physics_process(delta):
-	print(playerKiller.monitoring)
 	friendlyOrHarmful()	
 
 #Define se a planta vai matar o player ou servir de plataforma.

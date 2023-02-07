@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Blueprints/PlantsBlueprint.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/World/Rose Placeholder.png" type="Texture" id=2]
+[ext_resource path="res://Assets/World/Spring/Rose Placeholder.png" type="Texture" id=2]
 
 [node name="Rose" instance=ExtResource( 1 )]
 plantSize = 2

@@ -5,10 +5,10 @@ export var is_harmful : bool
 
 var the_position = 0
 var growOne = 0
-var growSize = 0
+var growSize = 16
 var stats = LevelStats
 
-var trunk = preload("res://Scenes/World/Trunk.tscn")
+var trunk = preload("res://Scenes/World/RoseTrunk.tscn")
 onready var animationPlayer = $AnimationPlayer
 onready var collisionShape = $CollisionShape2D
 onready var playerKiller = $PlayerKiller
@@ -19,6 +19,7 @@ func _ready():
 	stats.connect("dashCountIncreased", self, "growUp")
 	
 func _physics_process(delta):
+
 	friendlyOrHarmful()	
 
 #Define se a planta vai matar o player ou servir de plataforma.
@@ -34,11 +35,6 @@ func friendlyOrHarmful():
 	
 #Faz a planta crescer com base no número de dashs dado pelo player
 func growUp():
-	if growOne == 0:
-		growSize = 0
-		animationPlayer.play("Growing Up")
-	else:
-		growSize = 16
 	
 	if growOne < plantSize:
 		plantTopPart.position.y -= growSize
@@ -47,10 +43,8 @@ func growUp():
 		collisionShape.scale.y += 1
 		collisionShape.position.y -= 8
 		growOne += 1
-		if growOne != 0 and growSize != 0:
-			var world = get_tree().current_scene
-			var new_trunk = trunk.instance()
-			new_trunk.rotation_degrees = rotation_degrees
-			new_trunk.global_position = global_position - Vector2(0, the_position)
-			world.add_child(new_trunk)
-			the_position += 16
+		var world = get_tree().current_scene
+		var new_trunk = trunk.instance()
+		new_trunk.global_position = global_position - Vector2(0, the_position)
+		world.add_child(new_trunk)
+		the_position += 16

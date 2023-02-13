@@ -3,8 +3,9 @@ extends KinematicBody2D
 const SPEED : int = 600
 
 onready var wallDetector = $WallDetector
-onready var dashCounterZone = get_parent().get_node("DashCounterZone")
 onready var camera = $Camera2D
+onready var animationPlayer = $AnimationPlayer
+onready var dashCounterZone = get_parent().get_node("DashCounterZone")
 onready var stats = LevelStats
 
 enum {
@@ -48,6 +49,7 @@ func _physics_process(delta):
 			camera.limit_bottom = 180
 			camera.limit_left = 0
 			camera.limit_top = 0
+			animationPlayer.play("Idle")
 	
 #Define os valores de velocity		
 func move(x : int, y : int):
@@ -111,7 +113,9 @@ func _on_WallDetector_body_entered(body):
 
 func _on_EnemyDetector_area_entered(area):
 	queue_free()
+	stats.died = true
 
 func _on_DashCounterZone_body_exited(body):
 	dashCounterZone.set_deferred("monitoring", false)
 	stats.dashCount += 1
+	animationPlayer.play("Dash")

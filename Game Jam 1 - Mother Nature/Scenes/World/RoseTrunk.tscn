@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/World/Trunk.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/World/Spring/Rose-Sheet.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Attached Scripts/RoseTrunk.gd" type="Script" id=3]
+
+[node name="RoseTrunk" instance=ExtResource( 1 )]
+position = Vector2( 0, -8 )
+texture = ExtResource( 2 )
+hframes = 2
+vframes = 1
+frame = 0
+script = ExtResource( 3 )

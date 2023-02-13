@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Blueprints/PlantsBlueprint.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/World/Spring/Rose Placeholder.png" type="Texture" id=2]
+[ext_resource path="res://Assets/World/Spring/Rose-Sheet.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Attached Scripts/Rose.gd" type="Script" id=3]
 
 [node name="Rose" instance=ExtResource( 1 )]
-plantSize = 2
+script = ExtResource( 3 )
 is_harmful = true
 
-[node name="Sprite" parent="." index="0"]
+[node name="PlantTopPart" parent="." index="0"]
+position = Vector2( 0, 0 )
 texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" parent="PlayerKiller" index="0"]
-modulate = Color( 1, 1, 1, 1 )
+hframes = 2
+vframes = 1

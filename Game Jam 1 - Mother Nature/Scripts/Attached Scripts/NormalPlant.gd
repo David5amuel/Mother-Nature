@@ -3,7 +3,7 @@ extends StaticBody2D
 export var plantSize := 0
 export var is_harmful : bool
 
-var the_position = 0
+var the_position = 16
 var growOne = 0
 var growSize = 0
 var stats = LevelStats

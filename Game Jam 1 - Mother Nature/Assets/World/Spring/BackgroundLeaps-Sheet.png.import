@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player Placeholder.png-0a1c66340996a6802e5d819392794dfb.stex"
+path="res://.import/BackgroundLeaps-Sheet.png-83d66cee733e0422e5e4a9a230b48991.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Player Placeholder.png"
-dest_files=[ "res://.import/Player Placeholder.png-0a1c66340996a6802e5d819392794dfb.stex" ]
+source_file="res://Assets/World/Spring/BackgroundLeaps-Sheet.png"
+dest_files=[ "res://.import/BackgroundLeaps-Sheet.png-83d66cee733e0422e5e4a9a230b48991.stex" ]
 
 [params]
 

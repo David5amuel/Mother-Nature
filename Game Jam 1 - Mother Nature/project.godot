@@ -10,8 +10,9 @@ config_version=4
 
 [application]
 
-config/name="Mother Nature"
-run/main_scene="res://Scenes/Levels/Tutorial Level.tscn"
+config/name="Gardener"
+config/description="A game about making plants grow. :D"
+run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -21,6 +22,7 @@ IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 LevelStats="*res://Scenes/Blueprints/LevelStats.tscn"
+PlayMusic="*res://Scenes/Blueprints/PlayMusic.tscn"
 
 [display]
 
